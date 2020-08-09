@@ -30,3 +30,5 @@ Collate:
     'vMF.R'
     'unif.R'
     'response-methods.R'
+Suggests: 
+    covr
