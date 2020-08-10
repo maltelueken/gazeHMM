@@ -129,7 +129,7 @@ gazeHMM <- function(x, y, t, unit = "px", res, dim, dist, fr, blink = NULL, b.wi
 
   if(!(is.numeric(b.win) && length(b.win) == 1 && b.win >= 0)) stop("'b.win' must be a single non-negative value")
 
-  if(!is.integer(nstates)) stop("'nstates must be integer'")
+  if(!is.integer(nstates)) nstates <- as.integer(nstates)
   if(length(nstates) != 1) stop("'nstates' must be a single value")
   if(nstates < 2 || nstates > 5) stop("'nstates' must have a value between 2 and 5")
 
