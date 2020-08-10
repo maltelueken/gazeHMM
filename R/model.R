@@ -11,7 +11,7 @@
 #' @param sf Vector of length two indicating by which factor velocity and acceleration data will be divided.
 #' @param fit.control List of settings for the EM algorithm as returned by \code{\link[depmixS4]{em.control}}.
 #'
-#' @return An object of class \code{\link[depmixS4]{depmix.fitted}}.
+#' @return An object of class \code{depmix.fitted}.
 #' @import depmixS4
 #' @export
 HMM_classify <- function(data, nstates, respstart, trstart, instart,

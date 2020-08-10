@@ -2,7 +2,15 @@
 #'
 #' Various methods for uniform, von Mises, and gamma response models to be used with \code{depmixS4}.
 #'
-#' @seealso \code{\link[depmixS4]{show}}.
+#' @param object An object of class 'depmix', 'depmix.fitted', or 'response'.
+#' @param which A single character element. Either 'pars', resulting in the
+#' parameters of the object, or 'fixed', resulting in the logical vector of
+#' which parameters are fixed.
+#' @param ... Further arguments to be passed to \code{setpars} or \code{getpars}
+#' @param values A vector of values to be set as the parameters of the object.
+#' @param nsim A single integer indicating how many times a data set should be
+#' simulated from the object.
+#' @param seed A single integer to determine the seed used for data simulation.
 #'
 #' @include unif.R vMF.R gamma2.R
 #' @name response-methods
@@ -23,9 +31,6 @@ setMethod("show", "unif",
           }
 )
 
-
-#' @rdname response-methods
-#'
 setMethod("dens", "unif",
           function(object, log = FALSE) {
 
@@ -81,9 +86,6 @@ setMethod("setpars", "unif",
           }
 )
 
-
-#' @rdname response-methods
-#'
 setMethod("fit", "unif",
           function(object, w) {
 
@@ -139,9 +141,6 @@ setMethod("show", "vMF",
           }
 )
 
-
-#' @rdname response-methods
-#'
 setMethod("dens","vMF",
           function(object) {
 
@@ -199,9 +198,6 @@ setMethod("setpars","vMF",
           }
 )
 
-
-#' @rdname response-methods
-#'
 setMethod("fit","vMF",
           function(object,w) {
 
@@ -280,9 +276,6 @@ setMethod("show","gamma2",
           }
 )
 
-
-#' @rdname response-methods
-#'
 setMethod("dens","gamma2",
           function(object,log=FALSE) {
 
@@ -334,9 +327,6 @@ setMethod("setpars","gamma2",
           }
 )
 
-
-#' @rdname response-methods
-#'
 setMethod("fit","gamma2",
           function(object,w) {
 

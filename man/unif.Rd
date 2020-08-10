@@ -13,6 +13,11 @@ unif(y, ...)
 }
 \arguments{
 \item{y}{Numeric vector containing a response variable.}
+
+\item{...}{Further arguments to be supplied by parent functions.}
+
+\item{fixed}{Logical vector of length two indicating which parameters are
+fixed.}
 }
 \value{
 An S4 object of class 'unif'.

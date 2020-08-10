@@ -4,6 +4,9 @@
 #' as part of \code{\link{HMM_classify}}.
 #'
 #' @param y Numeric vector containing a response variable.
+#' @param fixed Logical vector of length two indicating which parameters are
+#' fixed.
+#' @param ... Further arguments to be supplied by parent functions.
 #'
 #' @return An S4 object of class 'unif'.
 #' @slot parameters List of length two containing the minimum and maximum parameters

@@ -3,35 +3,25 @@
 \name{response-methods}
 \alias{response-methods}
 \alias{show,unif-method}
-\alias{dens,unif-method}
 \alias{getpars,response-method}
 \alias{setpars,unif-method}
-\alias{fit,unif-method}
 \alias{predict,unif-method}
 \alias{simulate,unif-method}
 \alias{show,vMF-method}
-\alias{dens,vMF-method}
 \alias{setpars,vMF-method}
-\alias{fit,vMF-method}
 \alias{predict,vMF-method}
 \alias{simulate,vMF-method}
 \alias{show,gamma2-method}
-\alias{dens,gamma2-method}
 \alias{setpars,gamma2-method}
-\alias{fit,gamma2-method}
 \alias{predict,gamma2-method}
 \alias{simulate,gamma2-method}
 \title{Methods for Additional Response Models}
 \usage{
 \S4method{show}{unif}(object)
 
-\S4method{dens}{unif}(object, log = FALSE)
-
 \S4method{getpars}{response}(object, which = "pars", ...)
 
 \S4method{setpars}{unif}(object, values, which = "pars", ...)
-
-\S4method{fit}{unif}(object, w)
 
 \S4method{predict}{unif}(object)
 
@@ -39,13 +29,9 @@
 
 \S4method{show}{vMF}(object)
 
-\S4method{dens}{vMF}(object)
-
 \S4method{getpars}{response}(object, which = "pars", ...)
 
 \S4method{setpars}{vMF}(object, values, which = "pars", ...)
-
-\S4method{fit}{vMF}(object, w)
 
 \S4method{predict}{vMF}(object)
 
@@ -53,21 +39,30 @@
 
 \S4method{show}{gamma2}(object)
 
-\S4method{dens}{gamma2}(object, log = FALSE)
-
 \S4method{getpars}{response}(object, which = "pars", ...)
 
 \S4method{setpars}{gamma2}(object, values, which = "pars", ...)
-
-\S4method{fit}{gamma2}(object, w)
 
 \S4method{predict}{gamma2}(object)
 
 \S4method{simulate}{gamma2}(object, nsim = 1, seed)
 }
+\arguments{
+\item{object}{An object of class 'depmix', 'depmix.fitted', or 'response'.}
+
+\item{which}{A single character element. Either 'pars', resulting in the
+parameters of the object, or 'fixed', resulting in the logical vector of
+which parameters are fixed.}
+
+\item{...}{Further arguments to be passed to \code{setpars} or \code{getpars}}
+
+\item{values}{A vector of values to be set as the parameters of the object.}
+
+\item{nsim}{A single integer indicating how many times a data set should be
+simulated from the object.}
+
+\item{seed}{A single integer to determine the seed used for data simulation.}
+}
 \description{
 Various methods for uniform, von Mises, and gamma response models to be used with \code{depmixS4}.
-}
-\seealso{
-\code{\link[depmixS4]{show}}.
 }

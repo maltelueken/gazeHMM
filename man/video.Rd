@@ -11,15 +11,25 @@
 \format{
   A data frame with 10889 observations on the following 19 variables.
   \describe{
-    \item{\code{subject}}{A numeric vector indicating the number of the subject}
-    \item{\code{t}}{A numeric vector containing the timestamp}
-    \item{\code{h_pupil}}{A numeric vector with the horizontal pupil dilation}
-    \item{\code{v_pupil}}{A numeric vector with the vertical pupil dilation}
-    \item{\code{x}}{A numeric vector containing the gaze position on the x-dimension}
-    \item{\code{y}}{A numeric vector containing the gaze position on the y-dimension}
-    \item{\code{coderMN}}{A numeric vector indicating the eye movement event annotated by the first human coder}
-    \item{\code{coderRA}}{A numeric vector indicating the eye movement event annotated by the second human coder}
-    \item{\code{...}}{A numeric vector indicating the eye movement event classified by the respective algorithm}
+    \item{\code{subject}}{A numeric vector indicating the number of the subject.}
+    \item{\code{t}}{A numeric vector containing the timestamp.}
+    \item{\code{h_pupil}}{A numeric vector with the horizontal pupil dilation.}
+    \item{\code{v_pupil}}{A numeric vector with the vertical pupil dilation.}
+    \item{\code{x}}{A numeric vector containing the gaze position on the x-dimension.}
+    \item{\code{y}}{A numeric vector containing the gaze position on the y-dimension.}
+    \item{\code{coderMN}}{A numeric vector indicating the eye movement event annotated by the first human coder.}
+    \item{\code{coderRA}}{A numeric vector indicating the eye movement event annotated by the second human coder.}
+    \item{\code{CDT}}{A numeric vector indicating the eye movement event classified by the CDT (only fixations) algorithm.}
+    \item{\code{EK}}{A numeric vector indicating the eye movement event classified by the EK (only saccades) algorithm.}
+    \item{\code{IDT}}{A numeric vector indicating the eye movement event classified by the IDT (only fixations) algorithm.}
+    \item{\code{IDTk}}{A numeric vector indicating the eye movement event classified by the IDTk (fixations and saccades) algorithm.}
+    \item{\code{IKF}}{A numeric vector indicating the eye movement event classified by the IKF (fixations and saccades) algorithm.}
+    \item{\code{IMST}}{A numeric vector indicating the eye movement event classified by the IMST (fixations and saccades) algorithm.}
+    \item{\code{IHMM}}{A numeric vector indicating the eye movement event classified by the IHMM (fixations and saccades) algorithm.}
+    \item{\code{IVT}}{A numeric vector indicating the eye movement event classified by the IVT (fixations and saccades) algorithm.}
+    \item{\code{NH}}{A numeric vector indicating the eye movement event classified by the NH (fixations, saccades, and PSOs) algorithm.}
+    \item{\code{BIT}}{A numeric vector indicating the eye movement event classified by the BIT (only fixations) algorithm.}
+    \item{\code{LNS}}{A numeric vector indicating the eye movement event classified by the LNS (saccades and PSOs) algorithm.}
   }
 }
 \details{

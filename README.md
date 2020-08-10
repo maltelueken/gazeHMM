@@ -12,14 +12,3 @@ status](https://ci.appveyor.com/api/projects/status/github/maltelueken/gazeHMM?b
 [![Codecov test
 coverage](https://codecov.io/gh/maltelueken/gazeHMM/branch/master/graph/badge.svg)](https://codecov.io/gh/maltelueken/gazeHMM?branch=master)
 <!-- badges: end -->
-
-The goal of gazeHMM is to …
-
-## Installation
-
-You can install the released version of gazeHMM from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("gazeHMM")
-```

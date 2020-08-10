@@ -4,6 +4,11 @@
 #' as part of \code{\link{HMM_classify}}.
 #'
 #' @param y Numeric vector containing a response variable.
+#' @param pstart Numeric vector of length two containing the starting values
+#' for the shape and scale parameters.
+#' @param fixed Logical vector of length two indicating which parameters are
+#' fixed.
+#' @param ... Further arguments to be supplied by parent functions.
 #'
 #' @return An S4 object of class 'gamma2'.
 #' @slot parameters List of length two containing the shape and scale parameters
