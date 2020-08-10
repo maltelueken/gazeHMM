@@ -11,7 +11,8 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
 Depends: 
-    depmixS4
+    depmixS4,
+    R (>= 2.10)
 Imports: 
     signal,
     dplyr,
@@ -31,4 +32,5 @@ Collate:
     'unif.R'
     'response-methods.R'
 Suggests: 
-    covr
+    covr,
+    testthat
