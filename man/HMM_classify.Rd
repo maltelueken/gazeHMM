@@ -31,7 +31,7 @@ The object must contain the variables \code{vel}, \code{acc}, and \code{angle}.}
 \item{fit.control}{List of settings for the EM algorithm as returned by \code{\link[depmixS4]{em.control}}.}
 }
 \value{
-An object of class \code{\link[depmixS4]{depmix.fitted}}.
+An object of class \code{depmix.fitted}.
 }
 \description{
 Classifies gaze data into eye movement events by using a hidden Markov model from the package depmixS4.

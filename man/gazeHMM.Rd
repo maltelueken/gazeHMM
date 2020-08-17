@@ -87,3 +87,50 @@ A list object of class 'gazeHMM' containing four elements:
 \description{
 Classify Gaze Data into Eye Movement Events
 }
+\details{
+The algorithm consists of a preprocessing, classification, and postprocessing step.
+
+During preprocessing, the raw data \code{x} and \code{y}  are first converted into degrees of visual angle (only if unit was px).
+Samples classified as blinks by \code{blink} and those surrounding them (by \code{b.win}) are set to \code{NA}.The remaining coordinates
+are then used to compute velocity, acceleration, and sample-to-sample angle signals.
+Velocity and acceleration are calculated by applying a Savitzky-Golay filter to the sampel coordinates
+and the sample-to-sample angle by apply finite forward and backward differences.
+
+In the classification step, a hidden Markov model with velocity, acceleration, and sample-to-sample angle
+as dependent variables classifies each sample as belonging to one of \code{nstates} states.
+The model describes the velocity and acceleration signals by mixtures of gamma distributions
+with shape and scale parameters. Sample-to-sample angle is modeled by a mixture of von Mises distributions
+and a uniform distribution. The argument \code{sf} determines by which factor velocities and
+accelerations will be divided. Increasing the factor can improve the fitting of the model
+(although the default should usually suffice). If \code{instart} or \code{trstart} are not supplied,
+uniform starting values will be used (i.e., 1/\code{nstates}).
+
+The postprocessing routine relabels samples that belong to one-sample fixations or smooth pursuits,
+saccades with a duration below \code{min.sac}, or PSOs following non-saccade samples.
+The respective samples are relabeled as the previous event.
+
+The classification labels correspond to the following events:
+\describe{
+  \item{0}{Blink/noise}
+  \item{1}{Fixation}
+  \item{2}{Saccade}
+  \item{3}{PSO}
+  \item{4}{Smooth pursuit}
+}
+}
+\examples{
+data(video)
+
+res <- c(1024, 768)
+dim <- c(380, 300)
+dist <- 670
+fr <- 500
+
+df <- video[video$subject == 1,]
+
+res <- gazeHMM(x = df$x, y = df$y, t = df$t, unit = "px",
+               res = res, dim = dim, dist = dist, fr = fr, blink = c(0, 0),
+               nstates = 4, sf = c(100, 100), random.respstart = F,
+               min.sac = 0.01)
+
+}

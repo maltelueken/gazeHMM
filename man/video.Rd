@@ -56,11 +56,11 @@ Data available at: https://github.com/richardandersson/EyeMovementDetectorEvalua
 \references{
 Larsson, L., Nystrom, M., & Stridh, M. (2013). Detection of saccades and postsaccadic
 oscillations in the presence of smooth pursuit. IEEE Transactions on Biomedical
-Engineering, 60 (9), 2484–2493. https://doi.org/10.1109/TBME.2013.2258918
+Engineering, 60 (9), 2484-2493. https://doi.org/10.1109/TBME.2013.2258918
 
-Larsson, L., Nyström, M., Andersson, R., & Stridh, M. (2015). Detection of fixations and
+Larsson, L., Nystrom, M., Andersson, R., & Stridh, M. (2015). Detection of fixations and
 smooth pursuit movements in high-speed eye-tracking data. Biomedical Signal
-Processing and Control, 18, 145–152. https://doi.org/10.1016/j.bspc.2014.12.008
+Processing and Control, 18, 145-152. https://doi.org/10.1016/j.bspc.2014.12.008
 }
 \examples{
 data(video)
