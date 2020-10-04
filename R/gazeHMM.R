@@ -153,7 +153,7 @@ gazeHMM <- function(x, y, t, unit = "px", res, dim, dist, fr, blink = NULL, b.wi
 
   if(!all.equal(length(x), length(y), length(t))) stop("'x', 'y', and 't' must have the same length")
 
-  if(t < 0) stop("'t' must be zero or positive")
+  if(any(t < 0)) stop("'t' must be zero or positive")
 
   if(!(unit %in% c("px", "va"))) stop("'unit' must be either 'px' or 'va'")
 
