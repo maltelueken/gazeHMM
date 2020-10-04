@@ -85,12 +85,13 @@ A list object of class 'gazeHMM' containing four elements:
 }
 }
 \description{
-Classify Gaze Data into Eye Movement Events
+The algorithm 'gazeHMM' for classifying eye-tracking data into eye movement events
+using a hidden Markov model.
 }
 \details{
 The algorithm consists of a preprocessing, classification, and postprocessing step.
 
-During preprocessing, the raw data \code{x} and \code{y}  are first converted into degrees of visual angle (only if unit was px).
+During preprocessing, the raw data \code{x} and \code{y}  are first converted into degrees of visual angle (only if \code{unit} was 'px').
 Samples classified as blinks by \code{blink} and those surrounding them (by \code{b.win}) are set to \code{NA}.The remaining coordinates
 are then used to compute velocity, acceleration, and sample-to-sample angle signals.
 Velocity and acceleration are calculated by applying a Savitzky-Golay filter to the sampel coordinates
@@ -130,7 +131,7 @@ df <- video[video$subject == 1,]
 
 res <- gazeHMM(x = df$x, y = df$y, t = df$t, unit = "px",
                res = res, dim = dim, dist = dist, fr = fr, blink = c(0, 0),
-               nstates = 4, sf = c(100, 100), random.respstart = F,
+               nstates = 4, sf = c(100, 100), random.respstart = FALSE,
                min.sac = 0.01)
 
 }

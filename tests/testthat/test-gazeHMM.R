@@ -11,7 +11,7 @@ test_that("gazeHMM runs", {
 
   res <- gazeHMM(x = df$x, y = df$y, t = df$t, unit = "px",
                  res = res, dim = dim, dist = dist, fr = fr, blink = c(0, 0),
-                 nstates = 4, sf = c(100, 100), random.respstart = F,
+                 nstates = 4, sf = c(100, 100), random.respstart = FALSE,
                  min.sac = 0.01)
 
   expect_equal(class(res), "gazeHMM")
