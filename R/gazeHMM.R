@@ -204,7 +204,7 @@ gazeHMM <- function(x, y, t, unit = "px", res, dim, dist, fr, blink = NULL, b.wi
   if(!missing(trstart)) {
     if(!is.matrix(trstart)) stop("'trstart' must be a matrix")
     if(!is.numeric(trstart)) stop("'trstart' must be numeric")
-    if(dim(trstart) != c(nstates, nstates)) stop("'trstart' must have dimensions equal to 'nstates'")
+    if(any(dim(trstart) != c(nstates, nstates))) stop("'trstart' must have dimensions equal to 'nstates'")
   }
 
   if(!missing(instart)) {
